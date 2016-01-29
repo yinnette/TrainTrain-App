@@ -1,0 +1,59 @@
+<div class="page profile-page logged-in">
+
+	<div class="app-head">
+		<div class="profile-info">
+			<div class="profile-level level-4"></div>
+		    <div class="profile-image" style="background-image: url('img/profile-images/profile.jpg')"></div>
+			<div class="profile-username">kickboxer_23</div>
+			<div class="profile-title">Fitness trainer & Kickboxer</div>
+			<div class="profile-actions"></div>
+			<div class="profile-location">Tampa, FL</div>
+		</div>
+	</div>
+
+	<div class="profile-feed" ng-controller="ProfileCtrl" ng-class="viewOptions">
+		<div class="post-options">
+			<button class="btn btn-primary btn-small viewList" ng-click="changeView()"><i class="fa fa-bars"></i></button>
+			<button class="btn btn-primary btn-small viewThumbs" ng-class="changeView" ng-click="changeView()"><i class="fa fa-th"></i></button>
+		</div>
+  		<div class="post" ng-repeat="item in posts" >
+  			<a href="" class="post-image" style="background-image:url('img/profile-images/{{item.postImage}}')"></a>
+  			<div class="post-info">
+  				<div class="post-actions" >
+  					<div class="trophies">
+  						<i class="fa fa-trophy"></i>
+  						<span ng-show="item.postTrophies.length > 0">{{item.postTrophies}}</span>
+  						<span ng-show="item.postTrophies.length === 0"> 0</span>
+  					</div>
+  					<div class="trainers" ng-show="item.postTrainer.length > 0">
+  						<a class="">
+  							<i class="fa fa-bolt"></i>
+  							<span>{{item.postTrainer}}<span><sp
+  						</a>
+  					</div>
+  					<div class="gym" ng-show="item.postGym.length > 0">
+  						<a class="">
+  							<i class="fa fa-location-arrow"></i>
+  							<span>{{item.postGym}}<span>
+  						</a>
+  					</div>
+  					<div class="user">posted by <a>@yinnette</a> about 4 days ago</div>
+  				</div>
+  				<div class="post-comment">
+					<div class="comments" ng-repeat="suboption in postComments">
+						<div class="comment">{{suboption}}</div>
+					</div>
+  				</div>
+  			</div>
+  		</div>
+  		
+  	</div>
+	
+</div>
+
+
+<style>
+	.header .app-brand  {
+		display:none;
+	}
+</style>

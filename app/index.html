@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>traintrain app</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <!-- build:css styles/vendor.css -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+	<!-- bower:css -->
+	<!-- endbower -->
+	<!-- endbuild -->
+	<!-- build:css({.tmp,app}) styles/main.css -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- endbuild -->
+  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body ng-class="">
+
+  <!--[if lt IE 7]>
+	  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+
+  <header class="header">
+	<nav class="nav main-nav">
+	  <ul class="nav nav-pills">
+		<li class="brand float-left">
+			<a class="logo-text" href="#/home"></a> 
+		</li>
+		<li class="dropdown">
+		  <a class="dropdown-toggle" ><i class="fa fa-ellipsis-v"></i></a>
+		  <ul class="dropdown-menu">
+			<li><a>Recommend User</a></li>
+			<li><a>View Schedule</a></li>
+			<li><a>Block User</a></li>
+			<li><a>Report User</a></li>
+		  </ul>
+		</li>
+		<li class="dropdown">
+		  <a class="dropdown-toggle"><i class="fa fa-cog"></i></a>
+		  <ul class="dropdown-menu">
+			<li><a>Edit Profile</a></li>
+			<li><a>Edit Schedule</a></li>
+			<li><a>Edit Meal Plan</a></li>
+			<li><a>Change Password</a></li>
+			<li><a>Spot Requests</a></li>
+		  </ul>
+		</li>
+		<li>
+			<a class="dropdown-toggle"><i class="fa fa-inbox"></i></a>
+		</li>
+	  </ul>
+	</nav>
+	<div class="app-brand">
+	  <a class="logo" href="#/home"></a>
+	</div>
+  </header>
+
+
+  <div ng-view></div>
+
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+
+  <!--<section class="view" role="home" style=""></section>
+  <section class="view" role="login"></section>
+  <section class="view" role="register"></section>
+  <section class="view" role="password"></section>
+  <section class="view" role="activity"></section>
+  <section class="view view-admin" role="profile"></section>
+  <section class="view" role="explore"></section>
+  <section class="view" role="inbox"></section>-->
+  
+	<footer class="footer">
+		<div class="footer">
+		  <ul class="nav nav-pills">
+			<li class="footer-activity">
+			  <a role="button"><i class="fa fa-logo"></i></a>
+			</li>
+			<li class="footer-search">
+			  <a href="#" role="button"><i class="fa fa-search"></i></a>
+			</li>
+			<li class="footer-picture">
+			  <a href="#" role="button"><i class="fa fa-camera"></i></a>
+			</li>
+			<li class="footer-users">
+			  <a href="#" role="button"><i class="fa fa-users"></i></a>
+			</li>
+			<li class="footer-profile">
+			  <a  href="#/profile" role="button"><i class="fa fa-user"></i></a>
+			</li>
+		  </ul>
+		</div>
+	</footer>
+ <!-- build:js scripts/vendor.js -->
+	<!-- bower:js -->
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<!-- endbower -->
+	<!-- endbuild -->
+	<!-- build:js({.tmp,app}) scripts/scripts.js -->
+	<script src="js/vendor/ui-bootstrap-tpls-1.1.1.min.js"></script>
+	<script src="app.js"></script>
+	<script src="home/home.js"></script>
+	<script src="login/login.js"></script>
+	<script src="register/register.js"></script>
+	<script src="profile/profile.js"></script>
+	<script src="components/version/version.js"></script>
+	<script src="components/version/version-directive.js"></script>
+	<script src="components/version/interpolate-filter.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+	<!-- endbuild -->
+</body>
+</html>

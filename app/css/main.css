@@ -5934,6 +5934,18 @@ a:hover {
     margin: 0 2px; }
     .btn.btn-small:hover {
       opacity: 1; }
+  .btn.btn-circle {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    font-size: 8px;
+    opacity: 0.8;
+    margin: 0 2px;
+    font-size: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 0; }
+    .btn.btn-circle:hover {
+      opacity: 1; }
 
 .float-left {
   float: left !important; }
@@ -6015,6 +6027,10 @@ a:hover {
       font-family: "FontAwesome";
       padding-right: 4px;
       color: #24adf2; }
+    .app-head .profile-info .profile-edit {
+      position: absolute;
+      top: 16%;
+      right: 6%; }
     .app-head .profile-info .profile-level {
       position: absolute;
       top: 25%;
@@ -6024,7 +6040,7 @@ a:hover {
         display: block;
         content: '\f005  \f005  \f005  \f006  \f006';
         letter-spacing: 0.02em;
-        color: #5ef2ff; }
+        color: #24adf2; }
       .app-head .profile-info .profile-level.level-1:before {
         content: '\f006  \f006  \f006  \f006  \f006 '; }
       .app-head .profile-info .profile-level.level-2:before {
@@ -6234,7 +6250,7 @@ a:hover {
           font-family: 'Open Sans', sans-serif;
           text-transform: none;
           padding: 10px 0;
-          background-color: #f9f9f9;
+          background-color: #f0f7f9;
           width: 100%;
           margin-top: 10px;
           font-size: 10px; }

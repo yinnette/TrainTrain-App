@@ -6033,7 +6033,7 @@ a:hover {
       right: 6%; }
     .app-head .profile-info .profile-level {
       position: absolute;
-      top: 25%;
+      top: 17%;
       left: 6%; }
       .app-head .profile-info .profile-level:before {
         font-family: "FontAwesome";
@@ -6241,7 +6241,7 @@ a:hover {
           vertical-align: top;
           display: inline-block;
           padding: 0 4px;
-          font-size: 14px; }
+          font-size: 10px; }
           .profile-feed .post .post-info .post-actions > div span {
             line-height: 20px;
             display: inline-block;
@@ -6251,7 +6251,7 @@ a:hover {
           font-family: 'Open Sans', sans-serif;
           text-transform: none;
           padding: 10px 0;
-          background-color: #f0f7f9;
+          background-color: #f8f8f8;
           width: 100%;
           margin-top: 10px;
           font-size: 10px; }

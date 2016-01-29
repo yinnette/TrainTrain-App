@@ -24,7 +24,7 @@ angular.module('myApp.profile', ['ngRoute'])
 			'postLocation' : 'Tampa, FL', 
 			'postDate' : '12/14/15' 
 		},
-		{'postImage' : '2.jpg', 'postTrophies' : '23'}, 
+		{'postImage' : '2.jpg', 'postTrophies' : '23','postTrainer' : 'The_Body_Builder'}, 
 		{'postImage' : '3.jpg', 'postTrophies' : '167'}, 
 		{'postImage' : '4.jpg', 'postTrophies' : '80'},
 		{'postImage' : '5.jpg', 'postTrophies' : '45'},

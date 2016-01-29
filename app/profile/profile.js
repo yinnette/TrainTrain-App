@@ -22,6 +22,7 @@ angular.module('myApp.profile', ['ngRoute'])
 			'postTrainer' : 'RocksTraining', 
 			'postGym' : 'YouFit Gym',
 			'postLocation' : 'Tampa, FL', 
+			'postDate' : '12/14/15' 
 		},
 		
 		{'postImage' : '2.jpg', 'postTrophies' : '23' }, 
@@ -39,7 +40,15 @@ angular.module('myApp.profile', ['ngRoute'])
 		{'postImage' : '14.jpg', 'postTrophies' : '46' },
 		{'postImage' : '15.jpg', 'postTrophies' : '34' },
 		{'postImage' : '16.jpg', 'postTrophies' : '12' }
+	],
+
+	$scope.profile = [
+		{
+			'profileUsername' : 'yinnette', 
+			'profile' : ''
+		}
 	]
+
 
 	$scope.viewOptions = "thumbnails";
 	$scope.changeView = function(){
@@ -49,15 +58,10 @@ angular.module('myApp.profile', ['ngRoute'])
 			$scope.viewOptions = "thumbnails";
 	};
 
-	$scope.profile = [
-		{
-			'profileUsername' = 'yinnette', 
-			'profile'
-		}
-	]
 
 
-
+	// other functions need to be built like 
+	// figuring out how long ago something was posted i.e. 1 day ago 1 week ago 1 month ago 2 months ago etc
 
 
 }]);

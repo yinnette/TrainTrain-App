@@ -1,4 +1,4 @@
-<div class="page profile-page logged-in">
+<div class="page profile-page logged-in" ng-controller="ProfileCtrl">
 
 	<div class="app-head">
 		<div class="profile-info">
@@ -11,7 +11,7 @@
 		</div>
 	</div>
 
-	<div class="profile-feed" ng-controller="ProfileCtrl" ng-class="viewOptions">
+	<div class="profile-feed" ng-class="viewOptions">
 		<div class="post-options">
 			<button class="btn btn-primary btn-small viewList" ng-click="changeView()"><i class="fa fa-bars"></i></button>
 			<button class="btn btn-primary btn-small viewThumbs" ng-class="changeView" ng-click="changeView()"><i class="fa fa-th"></i></button>

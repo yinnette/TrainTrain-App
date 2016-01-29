@@ -65,9 +65,10 @@ a {
 		display: block;
 	}
 	&.btn-small {
-		padding: 12px 20px;
+		padding: 12px 14px;
 		font-size: 8px;
-		opacity: 0.6;
+		opacity: 0.8;
+		margin: 0 2px;
 		&:hover {
 			opacity: 1;
 		}
@@ -350,13 +351,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0d70be', e
 	padding-bottom: 4%;
 }
 .profile-feed {
-	padding: 6% 2px;
+	padding: 6% 0;
 	float: left; 
 	width: 100%;
 	&.thumbnails {
 		.post {
-			width: 25%;
-			padding: 2px;
+			width: 33.3333333333%;
+			padding: 0;
 			.post-info {
 				display: none;
 			}
@@ -425,7 +426,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0d70be', e
 			}
 			.post-actions {
 				text-align: center;
-				padding: 10px 10px 0; 
+				padding: 10px 0 0; 
 				> div {
 					vertical-align: top;
 					display: inline-block; 
@@ -442,8 +443,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0d70be', e
 					font-family: 'Open Sans', sans-serif;
 					text-transform: none;
 					padding: 10px 0;
-					border-bottom: 1px solid $gray-lighter;
-					border-top: 1px solid $gray-lighter;
+					background-color: lighten($gray-lighter, 4%);
 					width: 100%;
 					margin-top: 10px;
 					font-size: 10px;

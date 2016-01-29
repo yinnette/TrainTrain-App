@@ -5928,9 +5928,10 @@ a:hover {
     margin: auto;
     display: block; }
   .btn.btn-small {
-    padding: 12px 20px;
+    padding: 12px 14px;
     font-size: 8px;
-    opacity: 0.6; }
+    opacity: 0.8;
+    margin: 0 2px; }
     .btn.btn-small:hover {
       opacity: 1; }
 
@@ -6160,12 +6161,12 @@ a:hover {
   padding-bottom: 4%; }
 
 .profile-feed {
-  padding: 6% 2px;
+  padding: 6% 0;
   float: left;
   width: 100%; }
   .profile-feed.thumbnails .post {
-    width: 25%;
-    padding: 2px; }
+    width: 33.3333333333%;
+    padding: 0; }
     .profile-feed.thumbnails .post .post-info {
       display: none; }
   .profile-feed.thumbnails .viewThumbs {
@@ -6218,7 +6219,7 @@ a:hover {
         color: #ff0078; }
       .profile-feed .post .post-info .post-actions {
         text-align: center;
-        padding: 10px 10px 0; }
+        padding: 10px 0 0; }
         .profile-feed .post .post-info .post-actions > div {
           vertical-align: top;
           display: inline-block;
@@ -6233,8 +6234,7 @@ a:hover {
           font-family: 'Open Sans', sans-serif;
           text-transform: none;
           padding: 10px 0;
-          border-bottom: 1px solid #eeeeee;
-          border-top: 1px solid #eeeeee;
+          background-color: #f9f9f9;
           width: 100%;
           margin-top: 10px;
           font-size: 10px; }

@@ -1,0 +1,37 @@
+<div class="page profile-page logged-in" ng-controller="ProfileCtrl">
+
+	<div class="app-head">
+		<div class="profile-info">
+			<div class="profile-level level-4"><label>Level</label></div>
+			<div class="profile-edit"><button class="btn btn-primary btn-small">Edit Profile</button></div>
+		    <a href="#/profile" class="profile-image" style="background-image: url('img/profile-images/profile.jpg')"></a>
+			<div class="profile-username">kickboxer_23</div>
+			<div class="profile-title">Fitness trainer & Kickboxer</div>
+			<div class="profile-actions"></div>
+			<div class="profile-location">Tampa, FL</div>
+		</div>
+	</div>
+
+	<div class="profile-feed" ng-class="viewOptions">
+		<div class="post-options">
+			<button class="btn btn-primary btn-circle"><i class="fa fa-calendar"></i></button>
+			<button class="btn btn-primary btn-circle"><i class="fa fa-cutlery"></i></button> |
+			<button class="btn btn-primary btn-circle viewList" ng-click="changeView()"><i class="fa fa-bars"></i></button>
+			<button class="btn btn-primary btn-circle viewThumbs" ng-class="changeView" ng-click="changeView()"><i class="fa fa-th"></i></button>|
+			<button class="btn btn-primary btn-circle"><i class="fa fa-location-arrow"></i></button>
+		</div>
+  		<div class="schedule" >
+  		
+  		  Schedule
+  		</div>
+  		
+  	</div>
+	
+</div>
+
+
+<style>
+	.header .app-brand  {
+		display:none;
+	}
+</style>

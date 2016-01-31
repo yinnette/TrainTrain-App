@@ -83,6 +83,7 @@ a {
 		font-size: 18px;
 		border: 1px solid rgba(255,255,255,0.4);
 		border-radius: 0;
+		line-height: 38px;
 		&:hover {
 			opacity: 1;
 		}
@@ -159,6 +160,7 @@ a {
 		border-radius: 50%;
 		position: relative;
 		margin: 0 auto 5%; 
+		display: block;
 	}
 	.profile-info {
 		text-align: center;

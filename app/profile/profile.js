@@ -7,6 +7,10 @@ angular.module('myApp.profile', ['ngRoute'])
     templateUrl: 'profile/profile.html',
     controller: 'ProfileCtrl'
   });
+  $routeProvider.when('/profile-schedule', {
+    templateUrl: 'profile/profile-schedule.html',
+    controller: 'ProfileCtrl'
+  });
 }])
 
 .controller('ProfileCtrl', [ '$scope', function($scope) {

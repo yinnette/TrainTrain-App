@@ -352,7 +352,8 @@ a {
 	background: -webkit-linear-gradient(top,  rgba(13,112,190,0.8) 75%,rgba(24,128,210,0) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom,  rgba(13,112,190,0.8) 75%,rgba(24,128,210,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0d70be', endColorstr='#001880d2',GradientType=0 ); /* IE6-9 */
-	background-attachment: fixed;
+	//background-color: rgba(10, 31, 91, 0.8);
+	//background-attachment: fixed;
 }
 
 .home-page {

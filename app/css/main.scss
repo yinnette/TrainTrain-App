@@ -80,7 +80,7 @@ a {
 		font-size: 8px;
 		opacity: 0.8;
 		margin: 0 2px;
-		font-size: 18px;
+		font-size: 14px;
 		border: 1px solid rgba(255,255,255,0.4);
 		border-radius: 0;
 		line-height: 38px;
@@ -371,6 +371,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0d70be', e
 	text-align: center;
 	padding-bottom: 4%;
 	color: rgba(255,255,255,0.4);
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding: 10px 0;
+    background-color: rgba(5,44,169,0.3);
 }
 .profile-feed {
 	padding: 6% 0;
@@ -512,6 +515,95 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0d70be', e
 			}
 		}
 	}
+}
+.schedule {
+    padding: 0 3%;
+    background-color: rgba(5, 44, 169, 0.3);
+	float: left;
+	width: 100%;
+    .day {
+    	background-color: rgba(14,27,54,0.5);
+    	padding: 10px;
+		float: left;
+		width: 100%;
+		margin-bottom: 10px;
+    	.weekday {
+			font-family: 'Montserrat', sans-serif;
+			text-transform: uppercase;
+			font-size: 10px;
+		    border-bottom: 1px solid rgba(255,255,255,0.1);
+		    float: left; 
+		    width:100%;
+		    padding: 0 0 5px 5px;
+		    line-height: 30px; 
+    	}
+    	.workout {
+    		float: left;
+    		width: 100%;
+    		border: 1px solid rgba(255,255,255,0.1);
+    		border-top: 0;
+    		.workout-reps {
+    			width: 18%; 
+    			float: left; 
+    			text-align: center;
+    			padding: 4px 0; 
+    			border-right: 1px solid rgba(255,255,255,0.1);
+    			span {
+    				display: block;
+    				&:last-child {
+						font-family: 'Montserrat', sans-serif;
+						text-transform: uppercase;
+						font-size: 10px;
+						opacity: 0.5;
+    				}
+    			}
+    		}
+    		.workout-title {
+    			width: 82%; 
+    			float: left; 
+    			padding: 12px;
+    			font-size: 12px;
+	 		    span {
+			    	float: right; 
+			    	background-color: $brand-danger;
+			    	padding: 7px;
+			    	display: inline-block;
+			    	text-transform: uppercase; 
+			    	font-size: 8px;
+			    }
+    		}
+    	}
+    }
+}
+.fa-cardio, .fa-weightloss, .fa-competition, .fa-regimen, 
+.fa-resistance, .fa-meditation, .fa-weights {
+    width: 18px;
+    height: 18px;
+    background-size: contain;
+    float: right;
+    //opacity: 0.8;
+    margin-left: 2px;
+}
+.fa-cardio {
+	background-image: url('../img/icons/icon-cardio.png'); 
+}
+.fa-weightloss {
+	background-image: url('../img/icons/icon-weightloss.png'); 
+}
+.fa-competition {
+	background-image: url('../img/icons/icon-competition.png'); 
+}
+.fa-regimen {
+	background-image: url('../img/icons/icon-schedule.png'); 
+}
+.fa-resistance {
+	background-image: url('../img/icons/icon-time.png'); 
+}
+.fa-meditation {
+	background-image: url('../img/icons/icon-meditation.png'); 
+}
+.fa-weights {
+	background-image: url('../img/icons/icon-weights.png'); 
 }
 
 // Test Code 

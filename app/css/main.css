@@ -5939,7 +5939,7 @@ a:hover {
     height: 40px;
     padding: 0;
     font-size: 8px;
-    opacity: 0.8;
+    opacity: 0.9;
     margin: 0 2px;
     font-size: 14px;
     border: 1px solid rgba(255, 255, 255, 0.4);
@@ -5972,18 +5972,22 @@ a:hover {
   .logo-text:hover {
     background-color: transparent !important; }
 
-.header .nav {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 24px; }
-  .header .nav .brand {
-    position: absolute;
-    z-index: 0;
+.header {
+  position: relative;
+  z-index: 2000000; }
+  .header .nav {
+    position: fixed;
     left: 0;
-    right: 0; }
-    .header .nav .brand .logo-text {
-      margin: auto; }
+    right: 0;
+    top: 24px;
+    z-index: 2000000; }
+    .header .nav .brand {
+      position: absolute;
+      z-index: 0;
+      left: 0;
+      right: 0; }
+      .header .nav .brand .logo-text {
+        margin: auto; }
 
 .fa-logo {
   width: 36px;
@@ -6040,7 +6044,7 @@ a:hover {
       .app-head .profile-info .profile-level:before {
         font-family: "FontAwesome";
         display: block;
-        content: '\f005  \f005  \f005  \f006  \f006';
+        content: '\f006  \f006  \f006  \f006  \f006';
         letter-spacing: 0.02em;
         color: #24adf2; }
       .app-head .profile-info .profile-level.level-1:before {
@@ -6153,7 +6157,7 @@ a:hover {
       color: white;
       opacity: 1; }
 
-.logged-in {
+.logged-in .app-head {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0d70be+75,1880d2+100&0.8+75,0+100 */
   background: -moz-linear-gradient(top, rgba(13, 112, 190, 0.8) 75%, rgba(24, 128, 210, 0) 100%);
   /* FF3.6-15 */
@@ -6180,7 +6184,7 @@ a:hover {
   color: rgba(255, 255, 255, 0.4);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding: 10px 0;
-  background-color: rgba(5, 44, 169, 0.3); }
+  background-color: rgba(5, 44, 169, 0.4); }
 
 .profile-feed {
   padding: 10px 0 0;
@@ -6218,7 +6222,6 @@ a:hover {
     .profile-feed .post .post-info {
       float: left;
       width: 100%;
-      background-color: white;
       color: #555555;
       font-family: 'Montserrat', sans-serif;
       text-transform: uppercase;
@@ -6235,13 +6238,16 @@ a:hover {
         text-align: left; }
       .profile-feed .post .post-info .fa {
         font-size: 16px;
-        color: #1880d2;
+        color: #3cb6f3;
         float: left; }
       .profile-feed .post .post-info .fa-bolt {
         color: #ff0078; }
       .profile-feed .post .post-info .post-actions {
         text-align: center;
-        padding: 10px 0 0; }
+        padding: 10px 0;
+        width: 100%;
+        float: left;
+        background-color: rgba(5, 44, 169, 0.3); }
         .profile-feed .post .post-info .post-actions > div {
           vertical-align: top;
           display: inline-block;
@@ -6251,7 +6257,8 @@ a:hover {
             line-height: 20px;
             display: inline-block;
             padding-left: 4px;
-            margin-top: -2px; }
+            margin-top: -2px;
+            color: white; }
         .profile-feed .post .post-info .post-actions .user {
           font-family: 'Open Sans', sans-serif;
           text-transform: none;
@@ -6266,6 +6273,30 @@ a:hover {
             float: none;
             font-weight: 500;
             color: #1880d2; }
+  .profile-feed .post-comments {
+    width: 100%;
+    float: left; }
+    .profile-feed .post-comments .comments {
+      width: 100%;
+      float: left; }
+      .profile-feed .post-comments .comments .comment {
+        width: 100%;
+        float: left;
+        text-align: left;
+        background-color: rgba(5, 44, 169, 0.3); }
+        .profile-feed .post-comments .comments .comment p {
+          text-align: left;
+          margin: 0;
+          padding: 10px;
+          border-top: 1px solid rgba(0, 0, 0, 0.2); }
+          .profile-feed .post-comments .comments .comment p span {
+            font-family: 'Open Sans', sans-serif;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 500;
+            text-transform: none; }
+          .profile-feed .post-comments .comments .comment p a {
+            color: white;
+            padding-right: 10px; }
 
 .footer {
   background-color: #24adf2;

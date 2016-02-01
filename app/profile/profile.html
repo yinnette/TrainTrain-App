@@ -1,14 +1,14 @@
-<div class="page profile-page logged-in" ng-controller="ProfileCtrl">
+<div class="page profile-page logged-in" ng-controller="ProfileCtrl as profile">
 
 	<div class="app-head">
-		<div class="profile-info">
-			<div class="profile-level level-4"><label>Level</label></div>
+		<div class="profile-info" ng-repeat="info in myprofile" >
+			<div class="profile-level level-{{info.level}}"><label>Level</label></div>
 			<div class="profile-edit"><button class="btn btn-primary btn-small">Edit Profile</button></div>
 		    <div class="profile-image" style="background-image: url('img/profile-images/profile.jpg')"></div>
-			<div class="profile-username">kickboxer_23</div>
+			<div class="profile-username">{{info.name}}</div>
 			<div class="profile-title">Fitness trainer & Kickboxer</div>
 			<div class="profile-actions"></div>
-			<div class="profile-location">Tampa, FL</div>
+			<div class="profile-location">Tampa, FL</div> 
 		</div>
 	</div>
 
@@ -20,32 +20,33 @@
 			<button class="btn btn-primary btn-circle viewThumbs" ng-class="changeView" ng-click="changeView()"><i class="fa fa-th"></i></button>|
 			<button class="btn btn-primary btn-circle"><i class="fa fa-location-arrow"></i></button>
 		</div>
-  		<div class="post" ng-repeat="item in posts" >
-  			<a href="" class="post-image" style="background-image:url('img/profile-images/{{item.postImage}}')"></a>
+  		<div class="post" ng-repeat="post in posts" >
+  			<a href="" class="post-image" style="background-image:url('img/profile-images/{{post.image}}')"></a>
   			<div class="post-info">
   				<div class="post-actions" >
   					<div class="trophies">
   						<i class="fa fa-trophy"></i>
-  						<span ng-show="item.postTrophies.length > 0">{{item.postTrophies}}</span>
-  						<span ng-show="item.postTrophies.length === 0"> 0</span>
+  						<span ng-show="post.trophies.length > 0">{{post.trophies}}</span>
+  						<span ng-show="post.trophies.length === 0"> 0</span>
   					</div>
-  					<div class="trainers" ng-show="item.postTrainer.length > 0">
+  					<div class="trainers" ng-show="post.trainer.length > 0">
   						<a class="">
   							<i class="fa fa-bolt"></i>
-  							<span>{{item.postTrainer}}<span><sp
+  							<span>{{post.trainer}}<span><sp
   						</a>
   					</div>
-  					<div class="gym" ng-show="item.postGym.length > 0">
+  					<div class="gym" ng-show="post.gym.length > 0">
   						<a class="">
   							<i class="fa fa-location-arrow"></i>
-  							<span>{{item.postGym}}<span>
+  							<span>{{post.gym}}<span>
   						</a>
   					</div>
-  					<div class="user">posted by <a>@yinnette</a> on {{item.postDate}}</div>
   				</div>
-  				<div class="post-comment">
-					<div class="comments" ng-repeat="suboption in postComments">
-						<div class="comment">{{suboption}}</div>
+  				<div class="post-comments">
+					<div class="comments">
+						<div class="comment" ng-repeat="comment in post.comments">
+							<p><a href="{{comment.url}}" class="user">@{{comment.user}}</a><span>{{comment.comment}}</span></p>
+						</div>
 					</div>
   				</div>
   			</div>

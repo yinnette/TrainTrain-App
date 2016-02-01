@@ -6,18 +6,22 @@ angular.module('myApp.profile', ['ngRoute'])
   $routeProvider.when('/profile', {
     templateUrl: 'profile/profile.html',
     controller: 'ProfileCtrl'
-  });
+  }),
   $routeProvider.when('/profile-schedule', {
     templateUrl: 'profile/profile-schedule.html',
+    controller: 'ProfileCtrl'
+  }), 
+  $routeProvider.when('/profile-meal', {
+    templateUrl: 'profile/profile-meal.html',
+    controller: 'ProfileCtrl'
+  }),
+  $routeProvider.when('/profile-location', {
+    templateUrl: 'profile/profile-location.html',
     controller: 'ProfileCtrl'
   });
 }])
 
 .controller('ProfileCtrl', [ '$scope', function($scope) {
-
-
-
-
 	$scope.posts = [
 		{ 
 			image : '5.jpg', 
@@ -63,19 +67,112 @@ angular.module('myApp.profile', ['ngRoute'])
 					url: ''
 				}			
 			]
+		},
+		{ 
+			image : '8.jpg', 
+			trophies : '25', 
+			trainer : 'GymHead', 
+			gym : 'LA Fitness Gym',
+			location : 'Tampa, FL', 
+			date : '12/16/15',
+			comments : [ 
+				{
+					user: 'Jennie03',
+					comment : 'I cant believe this is an actual lunge.', 
+					url: ''
+				},
+				{
+					user: 'henUkdn34_2',
+					comment : 'Where is that @louis30',
+					url: ''
+				},
+				{
+					user: 'dsfdwe',
+					comment : 'veefe',
+					url: ''
+				}			
+			]
 		}
 	],
 
 	$scope.myprofile = [
 		{ 
 			name : 'yinnette', 
-			level : '2', 
-			location : 'Tampa', 
+			level : '5', 
+			city : 'Tampa', 
+			state : 'FL', 
+			title : 'Kickboxer & Trainer', 
+			image : 'profile', 
 			crew : [ 
 				{
 					user : 'Rockhard_Abz',
 					user : 'rockerAbs10'
 				}		
+			]
+		}
+	],
+
+	$scope.schedule = [
+		{ 
+			title : 'Monday',
+			workout : [
+				{
+					quantity: '20',
+					type: 'reps',
+					title: 'Push-Ups',
+					area: [ 'meditation', 'cardio']
+				},
+				{
+					quantity: '30',
+					type: 'min',
+					title: 'Treadmill',
+					area: [ 'competition', 'weightloss', 'regimen']
+				}
+			]
+		},
+		{ 
+			title : 'Thursday',
+			workout : [
+				{
+					quantity: '20',
+					type: 'reps',
+					title: 'Push-Ups',
+					area: [ 'weights', 'resistance']
+				},
+				{
+					quantity: '30',
+					type: 'min',
+					title: 'Jumping Jacks',
+					area: [ 'cardio']
+				}
+			]
+		}
+	],
+
+	$scope.meals = [
+		{ 
+			title : 'Breakfast',
+			meals : [
+				{
+					quantity: '4',
+					type: 'oz',
+					title: 'Lemon Pepper Fish'
+				},
+				{
+					quantity: '2',
+					type: 'oz',
+					title: 'Grain Rice with Garlic'
+				}
+			]
+		},
+		{ 
+			title : 'Brunch',
+			meals : [
+				{
+					quantity: '8',
+					type: 'oz',
+					title: 'Protein Shake'
+				}
 			]
 		}
 	],

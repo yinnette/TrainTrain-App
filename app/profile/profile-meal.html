@@ -12,7 +12,7 @@
 		</div>
 	</div>
 
-	<div class="profile-feed schedule" ng-class="viewOptions">
+	<div class="profile-feed meals" ng-class="viewOptions">
 		<div class="post-options">
 			<a class="btn btn-primary btn-circle viewList" ng-click="changeView()" href="#/profile"><i class="fa fa-bars"></i></a>
 			<a class="btn btn-primary btn-circle " ng-class="changeView" ng-click="changeView()" href="#/profile"><i class="fa fa-th"></i></a>|
@@ -20,16 +20,16 @@
 			<a class="btn btn-primary btn-circle btn-meals" href="#/profile-meal"><i class="fa fa-cutlery"></i></a>
 			<a class="btn btn-primary btn-circle" href="#/profile-location"><i class="fa fa-location-arrow"></i></a>
 		</div>
-		<div class="workouts">
-			<div class="day" ng-repeat="day in schedule">
-			  <div class="weekday">{{day.title}}</div>
-			  <div class="workout" ng-repeat="workout in day.workout">
+		<div class="meals-info">
+			<div class="meal" ng-repeat="meal in meals">
+			  <div class="meal-time">{{meal.title}}</div>
+			  <div class="meal-option" ng-repeat="meals in meal.meals">
 				<div class="workout-reps">
-				  <span>{{workout.quantity}}</span>
-				  <span>{{workout.type}}</span>
+				  <span>{{meals.quantity}}</span>
+				  <span>{{meals.type}}</span>
 				</div>
 				<div class="workout-title">
-				  {{workout.title}}
+				  {{meals.title}}
 				  <span ng-repeat="area in workout.area"><i class="fa fa-{{area}}"></i></span>
 				</div>
 			  </div>

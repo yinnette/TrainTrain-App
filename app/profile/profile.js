@@ -20,7 +20,7 @@ angular.module('myApp.profile', ['ngRoute'])
 
 	$scope.posts = [
 		{ 
-			image : '1.jpg', 
+			image : '5.jpg', 
 			trophies : '6', 
 			trainer : 'RocksTraining', 
 			gym : 'YouFit Gym',
@@ -35,6 +35,31 @@ angular.module('myApp.profile', ['ngRoute'])
 				{
 					user: 'abby_workz',
 					comment : 'Love the shorts',
+					url: ''
+				}			
+			]
+		},
+		{ 
+			image : '4.jpg', 
+			trophies : '25', 
+			trainer : 'GymHead', 
+			gym : 'LA Fitness Gym',
+			location : 'Tampa, FL', 
+			date : '12/16/15',
+			comments : [ 
+				{
+					user: 'Jennie03',
+					comment : 'I cant believe this is an actual lunge.', 
+					url: ''
+				},
+				{
+					user: 'henUkdn34_2',
+					comment : 'Where is that @louis30',
+					url: ''
+				},
+				{
+					user: 'dsfdwe',
+					comment : 'veefe',
 					url: ''
 				}			
 			]

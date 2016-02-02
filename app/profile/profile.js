@@ -26,7 +26,7 @@ angular.module('myApp.profile', ['ngRoute'])
 
 	$scope.posts = [
 		{ 
-			image : '5.jpg', 
+			image : '2.jpg', 
 			trophies : '6', 
 			trainer : 'RocksTraining', 
 			gym : 'YouFit Gym',
@@ -46,7 +46,7 @@ angular.module('myApp.profile', ['ngRoute'])
 			]
 		},
 		{ 
-			image : '4.jpg', 
+			image : '1.jpg', 
 			trophies : '25', 
 			trainer : 'GymHead', 
 			gym : 'LA Fitness Gym',
@@ -71,7 +71,7 @@ angular.module('myApp.profile', ['ngRoute'])
 			]
 		},
 		{ 
-			image : '8.jpg', 
+			image : '3.jpg', 
 			trophies : '25', 
 			trainer : 'GymHead', 
 			gym : 'LA Fitness Gym',

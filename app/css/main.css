@@ -6376,11 +6376,14 @@ a:hover {
 .locations {
   float: left;
   width: 100%; }
+  .locations .btn-locations {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.2; }
   .locations .check-ins .checkin-update {
     background-color: rgba(14, 27, 54, 0.5);
     padding: 10px 3%;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     float: left;
     width: 100%;
     text-align: center; }
@@ -6406,6 +6409,31 @@ a:hover {
       float: left;
       border-bottom: 1px solid rgba(255, 255, 255, 0.2);
       text-align: center; }
+  .locations .updates {
+    background-color: rgba(14, 27, 54, 0.5);
+    float: left;
+    width: 100%; }
+    .locations .updates .update {
+      float: left;
+      width: 100%;
+      font-size: 11px;
+      float: none;
+      line-height: 16px;
+      padding: 10px;
+      border-top: 1px solid rgba(0, 0, 0, 0.4);
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 500; }
+      .locations .updates .update span {
+        display: inline;
+        width: auto;
+        font-size: 11px;
+        float: none;
+        color: rgba(255, 255, 255, 0.7); }
+        .locations .updates .update span.post-date, .locations .updates .update span.post-location {
+          font-family: 'Montserrat', sans-serif;
+          text-transform: uppercase;
+          font-size: 10px;
+          color: #24adf2; }
 
 .meals {
   padding: 10px 3% 0;

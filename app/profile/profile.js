@@ -103,12 +103,19 @@ angular.module('myApp.profile', ['ngRoute'])
 			state : 'FL', 
 			title : 'Kickboxer & Trainer', 
 			image : 'profile', 
-			crew : [ 
+			spotters : [ 
+				{
+					user : 'Rockhard_Abz',
+					user : 'rockerAbs10'
+				}		
+			],
+			spots : [ 
 				{
 					user : 'Rockhard_Abz',
 					user : 'rockerAbs10'
 				}		
 			]
+
 		}
 	],
 
@@ -254,12 +261,14 @@ angular.module('myApp.profile', ['ngRoute'])
 
 	$scope.checkins = [
 		{ 
+		    date : '10/24/16',
 		    location : 'Golds Gym Carrollwood',
 		    city : 'Tampa',
 		    state: 'FL', 
 			post : 'On my grind with @shelly_03 #cardio #grind'
 		},
 		{ 
+			date : '10/24/16',
 		    location : 'Golds Gym Carrollwood',
 		    city : 'Tampa',
 		    state: 'FL', 

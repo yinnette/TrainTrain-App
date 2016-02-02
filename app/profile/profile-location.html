@@ -28,7 +28,8 @@
 			</div>
 			<div class="updates">
 				<div class="update" ng-repeat="post in checkins">
-					<span class="post"> {{post.post}} </span> at <span class="post-location"> {{post.location}}</span> in <span>{{post.city}},{{post.state}}</span> on <span class="post-date">{{post.date}}</span>
+					<div class="update-profile" ng-repeat="info in myprofile" style="background-image: url('img/profile-images/{{info.image}}.jpg')"></div>
+					<span class="post">{{post.post}} </span> at <span class="post-location"> {{post.location}}</span> in <span>{{post.city}},{{post.state}}</span> on <span class="post-date">{{post.date}}</span>
 				</div>
 			</div>
 		</div>	

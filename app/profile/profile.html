@@ -44,8 +44,14 @@
   				</div>
   				<div class="post-comments">
 					<div class="comments">
-						<div class="comment" ng-repeat="comment in post.comments">
+						<div class="comment collapsed" ng-repeat="comment in post.comments  | limitTo: limit">
 							<p><a href="{{comment.url}}" class="user">@{{comment.user}}</a><span>{{comment.comment}}</span></p>
+						</div>
+						<div class="show-more" ng-hide="post.comments.length < limit">
+							<a class="more-link" ng-click="limitTo()">show more...</a>
+						</div>
+						<div class="show-less" ng-hide="post.comments.length < 4">
+							<a class="more-link" ng-click="limitDown()">show less...</a>
 						</div>
 					</div>
   				</div>

@@ -22,6 +22,8 @@ angular.module('myApp.profile', ['ngRoute'])
 }])
 
 .controller('ProfileCtrl', [ '$scope', function($scope) {
+	
+
 	$scope.posts = [
 		{ 
 			image : '5.jpg', 
@@ -90,10 +92,26 @@ angular.module('myApp.profile', ['ngRoute'])
 					user: 'dsfdwe',
 					comment : 'veefe',
 					url: ''
-				}			
+				},
+				{
+					user: 'Jennie03',
+					comment : 'I cant believe this is an actual lunge.', 
+					url: ''
+				},
+				{
+					user: 'henUkdn34_2',
+					comment : 'Where is that @louis30',
+					url: ''
+				},
+				{
+					user: 'dsfdwe',
+					comment : 'veefe',
+					url: ''
+				}				
 			]
 		}
 	],
+
 
 	$scope.myprofile = [
 		{ 
@@ -273,6 +291,34 @@ angular.module('myApp.profile', ['ngRoute'])
 		    city : 'Tampa',
 		    state: 'FL', 
 			post : 'Spotting @rockabz_2014 #weights #lifting'
+		},
+		{ 
+		    date : '10/24/16',
+		    location : 'Golds Gym Carrollwood',
+		    city : 'Tampa',
+		    state: 'FL', 
+			post : 'On my grind with @shelly_03 #cardio #grind'
+		},
+		{ 
+			date : '10/24/16',
+		    location : 'Golds Gym Carrollwood',
+		    city : 'Tampa',
+		    state: 'FL', 
+			post : 'Spotting @rockabz_2014 #weights #lifting'
+		},
+		{ 
+		    date : '10/24/16',
+		    location : 'Golds Gym Carrollwood',
+		    city : 'Tampa',
+		    state: 'FL', 
+			post : 'On my grind with @shelly_03 #cardio #grind'
+		},
+		{ 
+			date : '10/24/16',
+		    location : 'Golds Gym Carrollwood',
+		    city : 'Tampa',
+		    state: 'FL', 
+			post : 'Spotting @rockabz_2014 #weights #lifting'
 		}
 	],
 
@@ -284,9 +330,16 @@ angular.module('myApp.profile', ['ngRoute'])
 			$scope.viewOptions = "thumbnails";
 	};
 
+	var limitToComments = 4 ;
+	$scope.limit = limitToComments;
+	$scope.limitTo = function(){
+		if ($scope.limit <= limitToComments)
+			$scope.limit = 3 ;
+		else
+			$scope.limit = limitToComments + 1000000;
+	};
 
-
-
+ 
 
 	// other functions need to be built like 
 	// figuring out how long ago something was posted i.e. 1 day ago 1 week ago 1 month ago 2 months ago etc

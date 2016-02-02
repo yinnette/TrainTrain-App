@@ -6236,6 +6236,12 @@ a:hover {
         text-transform: uppercase;
         font-size: 10px;
         text-align: left; }
+        .profile-feed .post .post-info a.more-link {
+          display: block !important;
+          padding: 10px;
+          color: rgba(255, 255, 255, 0.4);
+          border-top: 1px solid rgba(0, 0, 0, 0.2);
+          width: 100%; }
       .profile-feed .post .post-info .fa {
         font-size: 16px;
         color: #3cb6f3;
@@ -6283,6 +6289,8 @@ a:hover {
         width: 100%;
         float: left;
         text-align: left; }
+        .profile-feed .post-comments .comments .comment.collapsed .show-less {
+          display: none; }
         .profile-feed .post-comments .comments .comment p {
           text-align: left;
           margin: 0;
@@ -6419,10 +6427,21 @@ a:hover {
       font-size: 11px;
       float: none;
       line-height: 16px;
-      padding: 10px;
+      padding: 10px 10px 10px 20%;
       border-top: 1px solid rgba(0, 0, 0, 0.4);
       color: rgba(255, 255, 255, 0.8);
-      font-weight: 500; }
+      font-weight: 500;
+      position: relative; }
+      .locations .updates .update .update-profile {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        position: absolute;
+        left: 10px;
+        top: 15px; }
       .locations .updates .update span {
         display: inline;
         width: auto;

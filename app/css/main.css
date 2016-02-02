@@ -6324,8 +6324,7 @@ a:hover {
           margin-top: 10px; }
 
 .schedule {
-  padding: 0 3%;
-  background-color: rgba(5, 44, 169, 0.3);
+  padding: 10px 3% 0;
   float: left;
   width: 100%; }
   .schedule .btn-schedule {
@@ -6374,9 +6373,42 @@ a:hover {
           float: right;
           padding-left: 5px; }
 
+.locations {
+  float: left;
+  width: 100%; }
+  .locations .check-ins .checkin-update {
+    background-color: rgba(14, 27, 54, 0.5);
+    padding: 10px 3%;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    float: left;
+    width: 100%;
+    text-align: center; }
+    .locations .check-ins .checkin-update .btn {
+      margin-top: 10px;
+      float: none; }
+    .locations .check-ins .checkin-update input {
+      border-radius: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      font-weight: 500;
+      padding: 10px 0;
+      background-color: transparent;
+      width: 90%;
+      display: block;
+      float: left; }
+      .locations .check-ins .checkin-update input:focus, .locations .check-ins .checkin-update input:active {
+        background-color: transparent !important; }
+    .locations .check-ins .checkin-update .find-location {
+      color: #24adf2;
+      padding: 10px;
+      width: 10%;
+      display: block;
+      float: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      text-align: center; }
+
 .meals {
-  padding: 0 3%;
-  background-color: rgba(5, 44, 169, 0.3);
+  padding: 10px 3% 0;
   float: left;
   width: 100%; }
   .meals .btn-meals {

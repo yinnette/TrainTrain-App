@@ -16,9 +16,9 @@
 		<div class="post-options">
 			<a class="btn btn-primary btn-circle viewList" ng-click="changeView()" href="#/profile"><i class="fa fa-bars"></i></a>
 			<a class="btn btn-primary btn-circle " ng-class="changeView" ng-click="changeView()" href="#/profile"><i class="fa fa-th"></i></a>|
+			<a class="btn btn-primary btn-circle" href="#/profile-location"><i class="fa fa-location-arrow"></i></a>
 			<a class="btn btn-primary btn-circle btn-schedule" href="#/profile-schedule"><i class="fa fa-calendar"></i></a>
 			<a class="btn btn-primary btn-circle btn-meals" href="#/profile-meal"><i class="fa fa-cutlery"></i></a>
-			<a class="btn btn-primary btn-circle" href="#/profile-location"><i class="fa fa-location-arrow"></i></a>
 		</div>
   		<div class="post" ng-repeat="post in posts" >
   			<a href="" class="post-image" style="background-image:url('img/profile-images/{{post.image}}')"></a>

@@ -162,6 +162,11 @@ angular.module('myApp.profile', ['ngRoute'])
 					quantity: '2',
 					type: 'oz',
 					title: 'Grain Rice with Garlic'
+				},
+				{
+					quantity: '8',
+					type: 'oz',
+					title: 'Protein Shake'
 				}
 			]
 		},
@@ -169,11 +174,96 @@ angular.module('myApp.profile', ['ngRoute'])
 			title : 'Brunch',
 			meals : [
 				{
+					quantity: '4',
+					type: 'oz',
+					title: 'Lemon Pepper Fish'
+				},
+				{
+					quantity: '2',
+					type: 'oz',
+					title: 'Grain Rice with Garlic'
+				},
+				{
 					quantity: '8',
 					type: 'oz',
 					title: 'Protein Shake'
 				}
 			]
+		},
+		{ 
+			title : 'Lunch',
+			meals : [
+				{
+					quantity: '4',
+					type: 'oz',
+					title: 'Lemon Pepper Fish'
+				},
+				{
+					quantity: '2',
+					type: 'oz',
+					title: 'Grain Rice with Garlic'
+				},
+				{
+					quantity: '8',
+					type: 'oz',
+					title: 'Protein Shake'
+				}
+			]
+		},
+		{ 
+			title : 'Noon',
+			meals : [
+				{
+					quantity: '4',
+					type: 'oz',
+					title: 'Lemon Pepper Fish'
+				},
+				{
+					quantity: '2',
+					type: 'oz',
+					title: 'Grain Rice with Garlic'
+				},
+				{
+					quantity: '8',
+					type: 'oz',
+					title: 'Protein Shake'
+				}
+			]
+		},
+		{ 
+			title : 'Dinner',
+			meals : [
+				{
+					quantity: '4',
+					type: 'oz',
+					title: 'Lemon Pepper Fish'
+				},
+				{
+					quantity: '2',
+					type: 'oz',
+					title: 'Grain Rice with Garlic'
+				},
+				{
+					quantity: '8',
+					type: 'oz',
+					title: 'Protein Shake'
+				}
+			]
+		}
+	],
+
+	$scope.checkins = [
+		{ 
+		    location : 'Golds Gym Carrollwood',
+		    city : 'Tampa',
+		    state: 'FL', 
+			post : 'On my grind with @shelly_03 #cardio #grind'
+		},
+		{ 
+		    location : 'Golds Gym Carrollwood',
+		    city : 'Tampa',
+		    state: 'FL', 
+			post : 'Spotting @rockabz_2014 #weights #lifting'
 		}
 	],
 

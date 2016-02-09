@@ -5894,7 +5894,8 @@ body {
   background-repeat: no-repeat;
   color: white;
   overflow: auto;
-  padding: 48px 0; }
+  padding: 0;
+  position: relative; }
   body p {
     color: #eeeeee; }
 
@@ -5998,8 +5999,8 @@ a:hover {
   background-position: center top; }
 
 .app-head {
-  padding-top: 5%;
-  position: relative; }
+  position: relative;
+  padding: 10px 0; }
   .app-head .profile-image {
     background-repeat: no-repeat;
     background-size: cover;
@@ -6157,16 +6158,20 @@ a:hover {
       color: white;
       opacity: 1; }
 
-.logged-in .app-head {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0d70be+75,1880d2+100&0.8+75,0+100 */
-  background: -moz-linear-gradient(top, rgba(13, 112, 190, 0.8) 75%, rgba(24, 128, 210, 0) 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(13, 112, 190, 0.8) 75%, rgba(24, 128, 210, 0) 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(13, 112, 190, 0.8) 75%, rgba(24, 128, 210, 0) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0d70be', endColorstr='#001880d2',GradientType=0 );
-  /* IE6-9 */ }
+.logged-in {
+  position: absolute;
+  top: 48px;
+  bottom: 48px; }
+  .logged-in .app-head {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0d70be+75,1880d2+100&0.8+75,0+100 */
+    background: -moz-linear-gradient(top, rgba(13, 112, 190, 0.8) 75%, rgba(24, 128, 210, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(13, 112, 190, 0.8) 75%, rgba(24, 128, 210, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(13, 112, 190, 0.8) 75%, rgba(24, 128, 210, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0d70be', endColorstr='#001880d2',GradientType=0 );
+    /* IE6-9 */ }
 
 .home-page {
   padding-top: 10%;
@@ -6186,7 +6191,6 @@ a:hover {
   padding: 10px 0; }
 
 .profile-feed {
-  padding: 10px 0 0;
   float: left;
   width: 100%; }
   .profile-feed.thumbnails .post {
@@ -6376,7 +6380,9 @@ a:hover {
         width: 82%;
         float: left;
         padding: 12px;
-        font-size: 12px; }
+        font-size: 12px;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        margin-left: -1px; }
         .schedule .day .workout .workout-title span {
           float: right;
           padding-left: 5px; }
@@ -6499,7 +6505,9 @@ a:hover {
         width: 82%;
         float: left;
         padding: 12px;
-        font-size: 12px; }
+        font-size: 12px;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        margin-left: -1px; }
         .meals .meal .meal-option .workout-title span {
           float: right;
           padding-left: 5px; }

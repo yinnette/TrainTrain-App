@@ -1,0 +1,11 @@
+<div class="app-head">
+    <div class="profile-info" ng-repeat="info in myprofile" >
+      <div class="profile-level level-{{info.level}}"><label>Level</label></div>
+      <div class="profile-edit"><button class="btn btn-primary btn-small">Edit Profile</button></div>
+        <a class="profile-image" href="#/profile" style="background-image: url('img/profile-images/{{info.image}}.jpg')"></a>
+      <div class="profile-username">{{info.name}}</div>
+      <div class="profile-title">{{info.title}}</div>
+      <div class="profile-actions"></div>
+      <div class="profile-location">{{info.city}}, {{info.state}}</div> 
+    </div>
+</div>

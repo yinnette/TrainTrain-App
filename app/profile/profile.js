@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.profile', ['ngRoute'])
+angular.module('trainTrain.profile', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/profile', {
@@ -21,306 +21,26 @@ angular.module('myApp.profile', ['ngRoute'])
   });
 }])
 
-.controller('ProfileCtrl', [ '$scope', function($scope) {
+.controller('ProfileCtrl', [ '$scope', '$http', function($scope, $http) {
 	
-
-	$scope.posts = [
-		{ 
-			image : '2.jpg', 
-			trophies : '6', 
-			trainer : 'RocksTraining', 
-			gym : 'YouFit Gym',
-			location : 'Tampa, FL', 
-			date : '12/14/15',
-			comments : [ 
-				{
-					user: 'Rockhard_Abz',
-					comment : 'Wow, keep rocking on! This is what i need to start doing. ', 
-					url: ''
-				},
-				{
-					user: 'abby_workz',
-					comment : 'Love the shorts',
-					url: ''
-				}			
-			]
-		},
-		{ 
-			image : '1.jpg', 
-			trophies : '25', 
-			trainer : 'GymHead', 
-			gym : 'LA Fitness Gym',
-			location : 'Tampa, FL', 
-			date : '12/16/15',
-			comments : [ 
-				{
-					user: 'Jennie03',
-					comment : 'I cant believe this is an actual lunge.', 
-					url: ''
-				},
-				{
-					user: 'henUkdn34_2',
-					comment : 'Where is that @louis30',
-					url: ''
-				},
-				{
-					user: 'dsfdwe',
-					comment : 'veefe',
-					url: ''
-				}			
-			]
-		},
-		{ 
-			image : '3.jpg', 
-			trophies : '25', 
-			trainer : 'GymHead', 
-			gym : 'LA Fitness Gym',
-			location : 'Tampa, FL', 
-			date : '12/16/15',
-			comments : [ 
-				{
-					user: 'Jennie03',
-					comment : 'I cant believe this is an actual lunge.', 
-					url: ''
-				},
-				{
-					user: 'henUkdn34_2',
-					comment : 'Where is that @louis30',
-					url: ''
-				},
-				{
-					user: 'dsfdwe',
-					comment : 'veefe',
-					url: ''
-				},
-				{
-					user: 'Jennie03',
-					comment : 'I cant believe this is an actual lunge.', 
-					url: ''
-				},
-				{
-					user: 'henUkdn34_2',
-					comment : 'Where is that @louis30',
-					url: ''
-				},
-				{
-					user: 'dsfdwe',
-					comment : 'veefe',
-					url: ''
-				}				
-			]
-		}
-	],
+	$http.get('json/posts.json').success(function(data){
+		$scope.posts = data;
+	}),
+	$http.get('json/profile.json').success(function(data){
+		$scope.myprofile = data;
+	}),
+	$http.get('json/meals.json').success(function(data){
+		$scope.meals = data;
+	}),
+	$http.get('json/checkins.json').success(function(data){
+		$scope.checkins = data;
+	}),
+	$http.get('json/schedule.json').success(function(data){
+		$scope.schedule = data;
+	}),
 
 
-	$scope.myprofile = [
-		{ 
-			name : 'yinnette', 
-			level : '5', 
-			city : 'Tampa', 
-			state : 'FL', 
-			title : 'Kickboxer & Trainer', 
-			image : 'profile', 
-			spotters : [ 
-				{
-					user : 'Rockhard_Abz',
-					user : 'rockerAbs10'
-				}		
-			],
-			spots : [ 
-				{
-					user : 'Rockhard_Abz',
-					user : 'rockerAbs10'
-				}		
-			]
 
-		}
-	],
-
-	$scope.schedule = [
-		{ 
-			title : 'Monday',
-			workout : [
-				{
-					quantity: '20',
-					type: 'reps',
-					title: 'Push-Ups',
-					area: [ 'meditation', 'cardio']
-				},
-				{
-					quantity: '30',
-					type: 'min',
-					title: 'Treadmill',
-					area: [ 'competition', 'weightloss', 'regimen']
-				}
-			]
-		},
-		{ 
-			title : 'Thursday',
-			workout : [
-				{
-					quantity: '20',
-					type: 'reps',
-					title: 'Push-Ups',
-					area: [ 'weights', 'resistance']
-				},
-				{
-					quantity: '30',
-					type: 'min',
-					title: 'Jumping Jacks',
-					area: [ 'cardio']
-				}
-			]
-		}
-	],
-
-	$scope.meals = [
-		{ 
-			title : 'Breakfast',
-			meals : [
-				{
-					quantity: '4',
-					type: 'oz',
-					title: 'Lemon Pepper Fish'
-				},
-				{
-					quantity: '2',
-					type: 'oz',
-					title: 'Grain Rice with Garlic'
-				},
-				{
-					quantity: '8',
-					type: 'oz',
-					title: 'Protein Shake'
-				}
-			]
-		},
-		{ 
-			title : 'Brunch',
-			meals : [
-				{
-					quantity: '4',
-					type: 'oz',
-					title: 'Lemon Pepper Fish'
-				},
-				{
-					quantity: '2',
-					type: 'oz',
-					title: 'Grain Rice with Garlic'
-				},
-				{
-					quantity: '8',
-					type: 'oz',
-					title: 'Protein Shake'
-				}
-			]
-		},
-		{ 
-			title : 'Lunch',
-			meals : [
-				{
-					quantity: '4',
-					type: 'oz',
-					title: 'Lemon Pepper Fish'
-				},
-				{
-					quantity: '2',
-					type: 'oz',
-					title: 'Grain Rice with Garlic'
-				},
-				{
-					quantity: '8',
-					type: 'oz',
-					title: 'Protein Shake'
-				}
-			]
-		},
-		{ 
-			title : 'Noon',
-			meals : [
-				{
-					quantity: '4',
-					type: 'oz',
-					title: 'Lemon Pepper Fish'
-				},
-				{
-					quantity: '2',
-					type: 'oz',
-					title: 'Grain Rice with Garlic'
-				},
-				{
-					quantity: '8',
-					type: 'oz',
-					title: 'Protein Shake'
-				}
-			]
-		},
-		{ 
-			title : 'Dinner',
-			meals : [
-				{
-					quantity: '4',
-					type: 'oz',
-					title: 'Lemon Pepper Fish'
-				},
-				{
-					quantity: '2',
-					type: 'oz',
-					title: 'Grain Rice with Garlic'
-				},
-				{
-					quantity: '8',
-					type: 'oz',
-					title: 'Protein Shake'
-				}
-			]
-		}
-	],
-
-	$scope.checkins = [
-		{ 
-		    date : '10/24/16',
-		    location : 'Golds Gym Carrollwood',
-		    city : 'Tampa',
-		    state: 'FL', 
-			post : 'On my grind with @shelly_03 #cardio #grind'
-		},
-		{ 
-			date : '10/24/16',
-		    location : 'Golds Gym Carrollwood',
-		    city : 'Tampa',
-		    state: 'FL', 
-			post : 'Spotting @rockabz_2014 #weights #lifting'
-		},
-		{ 
-		    date : '10/24/16',
-		    location : 'Golds Gym Carrollwood',
-		    city : 'Tampa',
-		    state: 'FL', 
-			post : 'On my grind with @shelly_03 #cardio #grind'
-		},
-		{ 
-			date : '10/24/16',
-		    location : 'Golds Gym Carrollwood',
-		    city : 'Tampa',
-		    state: 'FL', 
-			post : 'Spotting @rockabz_2014 #weights #lifting'
-		},
-		{ 
-		    date : '10/24/16',
-		    location : 'Golds Gym Carrollwood',
-		    city : 'Tampa',
-		    state: 'FL', 
-			post : 'On my grind with @shelly_03 #cardio #grind'
-		},
-		{ 
-			date : '10/24/16',
-		    location : 'Golds Gym Carrollwood',
-		    city : 'Tampa',
-		    state: 'FL', 
-			post : 'Spotting @rockabz_2014 #weights #lifting'
-		}
-	],
 
 	$scope.viewOptions = "thumbnails";
 	$scope.changeView = function(){

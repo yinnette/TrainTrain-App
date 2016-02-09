@@ -1,4 +1,5 @@
-<div class="page register-page">
+<div ng-include="src='partials/header-logged-out.html'"></div>
+<div class="page register-page"  ng-controller="RegisterCtrl">
 	<div class="login-actions">
 		<form id="login-form">
 		  <div class="form-group">
@@ -21,10 +22,3 @@
 	</div>
 </div>
 
-
-
-<style>
-	.header .main-nav {
-		display:none;
-	}
-</style>

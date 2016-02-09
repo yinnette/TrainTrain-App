@@ -1,8 +1,8 @@
 'use strict';
 
-describe('myApp.login module', function() {
+describe('trainTrain.login module', function() {
 
-  beforeEach(module('myApp.login'));
+  beforeEach(module('trainTrain.login'));
 
   describe('login controller', function(){
 

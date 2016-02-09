@@ -1,8 +1,8 @@
 'use strict';
 
-describe('myApp.profile module', function() {
+describe('trainTrain.profile module', function() {
 
-  beforeEach(module('myApp.profile'));
+  beforeEach(module('trainTrain.profile'));
 
   describe('profile controller', function(){
 

@@ -1,15 +1,19 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', [
+angular.module('trainTrain', [
   'ngRoute',
-  'myApp.home',
-  'myApp.login',
-  'myApp.register', 
-  'myApp.profile'
+  'firebase',
+  'trainTrain.home',
+  'trainTrain.login',
+  'trainTrain.register', 
+  'trainTrain.profile'
+
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/home'});
+
+
 
 
 }]);

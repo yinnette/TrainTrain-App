@@ -1,48 +1,35 @@
-<div class="page profile-page logged-in" ng-controller="ProfileCtrl as profile">
+<div class="page profile-page logged-in" ng-controller="ProfileCtrl">
+	<div ng-include="src='partials/header.html'"></div>
+	<div ng-include="src='partials/profile-user.html'"></div>
+	<div ng-include="src='partials/profile-menu.html'"></div>
 
-	<div class="app-head">
-	    <div class="profile-info" ng-repeat="info in myprofile" >
-	      <div class="profile-level level-{{info.level}}"><label>Level</label></div>
-	      <div class="profile-edit"><button class="btn btn-primary btn-small">Edit Profile</button></div>
-	        <a class="profile-image" href="#/profile" style="background-image: url('img/profile-images/{{info.image}}.jpg')"></a>
-	      <div class="profile-username">{{info.name}}</div>
-	      <div class="profile-title">{{info.title}}</div>
-	      <div class="profile-actions"></div>
-	      <div class="profile-location">{{info.city}}, {{info.state}}</div> 
-	    </div>
-	</div>
 
+
+  	<!-- Page Content Start-->
 	<div class="profile-feed" ng-class="viewOptions">
-		<div class="post-options">
-			<a class="btn btn-primary btn-circle viewList" ng-click="changeView()" href="#/profile"><i class="fa fa-bars"></i></a>
-			<a class="btn btn-primary btn-circle viewThumbs" ng-class="changeView" ng-click="changeView()" href="#/profile"><i class="fa fa-th"></i></a>|
-			<a class="btn btn-primary btn-circle btn-locations" href="#/profile-location"><i class="fa fa-location-arrow"></i></a>
-			<a class="btn btn-primary btn-circle btn-schedule" href="#/profile-schedule"><i class="fa fa-calendar"></i></a>
-			<a class="btn btn-primary btn-circle btn-meals" href="#/profile-meal"><i class="fa fa-cutlery"></i></a>
-		</div>
-  		<div class="post" ng-repeat="post in posts" >
-  			<a href="" class="post-image" style="background-image:url('img/profile-images/{{post.image}}')"></a>
-  			<div class="post-info">
-  				<div class="post-actions" >
-  					<div class="trophies">
-  						<i class="fa fa-trophy"></i>
-  						<span ng-show="post.trophies.length > 0">{{post.trophies}}</span>
-  						<span ng-show="post.trophies.length === 0"> 0</span>
-  					</div>
-  					<div class="trainers" ng-show="post.trainer.length > 0">
-  						<a class="">
-  							<i class="fa fa-bolt"></i>
-  							<span>{{post.trainer}}<span><sp
-  						</a>
-  					</div>
-  					<div class="gym" ng-show="post.gym.length > 0">
-  						<a class="">
-  							<i class="fa fa-location-arrow"></i>
-  							<span>{{post.gym}}<span>
-  						</a>
-  					</div>
-  				</div>
-  				<div class="post-comments">
+		<div class="post" ng-repeat="post in posts" >
+			<a href="" class="post-image" style="background-image:url('img/profile-images/{{post.image}}')"></a>
+			<div class="post-info">
+				<div class="post-actions" >
+					<div class="trophies">
+						<i class="fa fa-trophy"></i>
+						<span ng-show="post.trophies.length > 0">{{post.trophies}}</span>
+						<span ng-show="post.trophies.length === 0"> 0</span>
+					</div>
+					<div class="trainers" ng-show="post.trainer.length > 0">
+						<a class="">
+							<i class="fa fa-bolt"></i>
+							<span>{{post.trainer}}<span><sp
+						</a>
+					</div>
+					<div class="gym" ng-show="post.gym.length > 0">
+						<a class="">
+							<i class="fa fa-location-arrow"></i>
+							<span>{{post.gym}}<span>
+						</a>
+					</div>
+				</div>
+				<div class="post-comments">
 					<div class="comments">
 						<div class="comment collapsed" ng-repeat="comment in post.comments  | limitTo: limit">
 							<p><a href="{{comment.url}}" class="user">@{{comment.user}}</a><span>{{comment.comment}}</span></p>
@@ -54,17 +41,19 @@
 							<a class="more-link" ng-click="limitDown()">show less...</a>
 						</div>
 					</div>
-  				</div>
-  			</div>
-  		</div>
-  		
-  	</div>
-	
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	 <!-- Page Content End-->
+
+
+
+
+
+
+
+	 <div ng-include="src='partials/footer.html'"></div>
 </div>
 
-
-<style>
-	.header .app-brand  {
-		display:none;
-	}
-</style>

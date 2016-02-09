@@ -1,0 +1,23 @@
+[
+	{ 
+		"name" : "yinnette", 
+		"level" : "5", 
+		"city" : "Tampa", 
+		"state" : "FL", 
+		"title" : "Kickboxer & Trainer", 
+		"image" : "profile", 
+		"spotters" : [ 
+			{
+				"user" : "Rockhard_Abz",
+				"user" : "rockerAbs10"
+			}		
+		],
+		"spots" : [ 
+			{
+				"user" : "Rockhard_Abz",
+				"user" : "rockerAbs10"
+			}		
+		]
+
+	}
+]

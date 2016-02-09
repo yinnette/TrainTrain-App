@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.register', ['ngRoute'])
+angular.module('trainTrain.register', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/register', {
@@ -9,6 +9,12 @@ angular.module('myApp.register', ['ngRoute'])
   });
 }])
 
-.controller('RegisterCtrl', [function() {
+.controller('RegisterCtrl', ["$scope", "$firebaseArray", function($scope, $firebaseArray) {
+	var ref = new Firebase("https://traintrain.firebaseio.com/");
+
+
+
+
+
 
 }]);

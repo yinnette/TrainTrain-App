@@ -1,0 +1,36 @@
+[
+	{ 
+		"title" : "Monday",
+		"workout" : [
+			{
+				"quantity": "20",
+				"type": "reps",
+				"title": "Push-Ups",
+				"area": [ "meditation", "cardio"]
+			},
+			{
+				"quantity": "30",
+				"type": "min",
+				"title": "Treadmill",
+				"area": [ "competition", "weightloss", "regimen"]
+			}
+		]
+	},
+	{ 
+		"title" : "Thursday",
+		"workout" : [
+			{
+				"quantity": "20",
+				"type": "reps",
+				"title": "Push-Ups",
+				"area": [ "weights", "resistance"]
+			},
+			{
+				"quantity": "30",
+				"type": "min",
+				"title": "Jumping Jacks",
+				"area": [ "cardio"]
+			}
+		]
+	}
+]
